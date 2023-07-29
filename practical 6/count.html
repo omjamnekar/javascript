@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>counting no. of words on string</title>
+</head>
+<body>
+    <script>
+        function count()
+        {
+            var str, w=0;
+            str = f1.t1.value;
+            W= str.match(/\w+/g).length;
+            document.write("no of words:"+W);
+
+
+        }
+    </script>
+
+    <form name="f1">
+        enter a sentence
+        <input type ="text" name = "t1">
+        <br> <input type="button" value="world count" onclick="count()">
+    </form>
+
+</body>
+</html>

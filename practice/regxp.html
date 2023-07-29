@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>regExp</title>
+  </head>
+  <body>
+    <script>
+      var g =
+        'This is a demonstration of the 2334 "JavaScript" Regular Expression Object';
+
+      with (document) {
+        write("<br> bracket<br>");
+        write("the match of .r.:" + g.match(/[.s.]/g));
+        write("<br>the match of ^aRE:=" + g.match(/[^aRE]/g));
+        write("<br>the match of aRE:=" + g.match(/[aRE]/g));
+        write("<br>the match of aRE:=" + g.match(/[aRE]/gi));
+
+        write("<br>the match of a-a:" + g.match(/[a-b]/));
+        write("<br>the match of a-a:" + g.match(/[a-z]/g));
+        write("<br>the match of a-z:" + g.match(/[a-z]/gi));
+
+        write("<br>the match of A-z:" + g.match(/[A-z]/gi));
+        write("<br>the match of^A-z:" + g.match(/[^A-z]/gi));
+        write("<br>the match of 0-9:" + g.match(/[0-9]/gi));
+        write("<br>the match of x |y |z :" + g.match(/is|of|the/));
+
+        write("<br> metacharecter<br>");
+        write("<br>the match of whitespace:" + g.match(/\s/g));
+        write("<br>the match of non-whitespace charecter:" + g.match(/\S/g));
+        write("<br>the match of all words:" + g.match(/\w/g));
+        write("<br>the match of NON-word  character" + g.match(/\W/g));
+        write("<br>the match of digits:" + g.match(/\d/g));
+        write("<br>the match of non-digits:" + g.match(/\D/g));
+        write("<br>the match of beginning of word:" + g.match(/\b/g));
+        write("<br>the match of NOT beginning of word:" + g.match(/\B/g));
+
+        write("<br>");
+        write("quantifiers");
+
+        write("<br>the match of non-whitespace charecter:" + g.match(/\S+/g));
+        write("<br>the match of all words:" + g.match(/\w+/g));
+        write("<br>the match of digits:" + g.match(/\d+/g));
+        write("<br>the match of non-digits:" + g.match(/\D+/g));
+
+        var e = "hello!! helllooo !! hello!!! helllo!";
+        write("<br> matche zero or more accurance of lo:" + e.match(/lo?/g));
+        write(
+          "<br> matches of that charecter and from that till the end of word:" +
+            e.match(/lo*/g)
+        );
+        write(
+          "<br> matche zero or more accurance of w{3,5}:" + e.match(/\w{3,5}/g)
+        );
+
+        write(
+          "<br> matche zero or more accurance of w{3}:" + e.match(/\w{3}/g)
+        );
+
+        write("<br> matche zero or more accurance of ?=w:" + e.match(/\w/g));
+        write("<br> matche zero or more accurance of ?=w:" + e.match(/\?=w/g));
+        write("<br> matche zero or more accurance of ?=w:" + e.match(/\?!bw/g));
+      }
+    </script>
+  </body>
+</html>

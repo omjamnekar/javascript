@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var d1 = new Date();
+      var d2 = new Date("october 13,2014,11:13:00");
+      var d3 = new Date(2002, 0, 8);
+      var d4 = new Date(2002, 9, 8, 8, 46, 0);
+
+      with (document) {
+        write("<br>+d1:<br>" + d1);
+
+        write("<br>+d2:<br>" + d2);
+
+        write("<br>+d3:<br>" + d3);
+        write("<br>+d4:<br>" + d4);
+
+        write("<br>the getDate() function:" + d1.getDate());
+        write("<br>the getMonth() function:" + d1.getMonth());
+        write("<br>the getDay() function:" + d1.getDay());
+        write("<br>the getFullYear() function:" + d1.getFullYear());
+        write("<br>the getHours() function:" + d1.getHours());
+        write("<br>the getMinutes() function:" + d1.getMinutes());
+        write("<br>the getSeconds() function:" + d1.getSeconds());
+        write("<br>the getMilliseconds function:" + d1.getMilliseconds());
+        write("<br>");
+        write("<br>");
+
+        write(
+          "<br>the day of the month getUTCDate() function:" + d1.getUTCDate()
+        );
+        write(
+          "<br>the month of the year getUTCMonth() function:" + d1.getUTCMonth()
+        );
+        write("<br>the day of the week getUTCDay() function:" + d1.getUTCDay());
+        write("<br>the year getUTCFullYear() function:" + d1.getUTCFullYear());
+        write(
+          "<br>the hour of the month getUTCHours() function:" + d1.getUTCHours()
+        );
+        write(
+          "<br>the minute of hour getUTCMinutes() function:" +
+            d1.getUTCMinutes()
+        );
+        write("<br>the  second getUTCSeconds() function:" + d1.getUTCSeconds());
+        write(
+          "<br>the milisecond getUTCMilliseconds function:" +
+            d1.getUTCMilliseconds()
+        );
+
+        write("<br>the milisecond form jan 01 1970=" + d1.getTime());
+
+        write("<br>");
+        write("<br>" + d1.toString());
+        write("<br>" + d1.valueOf());
+
+        write("<br>");
+        write("<br>" + d1);
+        d1.setDate(3);
+        d1.setMonth(12);
+        d1.setYear(2004);
+        d1.setHours(3);
+        d1.setMinutes(34);
+        d1.setSeconds(56);
+        d1.setMilliseconds(44);
+        write("<br><br>" + d1.toString());
+      }
+    </script>
+  </body>
+</html>

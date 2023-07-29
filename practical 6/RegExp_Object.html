@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RegExp Object</title>
+</head>
+<body>
+    <script>
+        var s = "This is demestration of the \"JavaScript\" Regular Expression object";
+        with(document)
+        {
+            write(s); 
+            write("<br><b>Brakets</b><br>");
+            write("<br><b>s.match(/[d-n]/):"+s.match(/[d-n]/));
+                write("<p>s.match(/[d-n]/g)"+s.match(/[d-n]/g));
+                    write("<p>s.match(/[^d-n]/)"+s.match(/[^d-n]/));
+                        write("<p>s.match(/[^d-n]/g)"+s.match(/[^d-n]/g));
+                            write("<p>s.match(/[aRE]/g)"+s.match(/[aRE]/g));
+                                write("<p>s.match(/[A-Z]/g)"+s.match(/[A-Z]/g));
+                                    write("<p>s.match(/[0-9]/g)"+s.match(/[0-9]/g));
+                                                                                                       write("<br><b>s.metacharecter</b><br>");
+                                            write("<p>s.match(/.e/g)"+s.match(/.e/g));
+                                                write("<p>s.match(/.r./g)"+s.match(/.r./g));
+                                                    write("<p>s.match(/\w/g)"+s.match(/\w/g));
+                                                    write("<p>s.match(/\W/g)"+s.match(/\W/g));
+                                                        
+                                                    write("<p>s.match(/\d/g)"+s.match(/\d/g));
+                                                        
+                                                    write("<p>s.match(/\s+/g)"+s.match(/\s+/g));
+                                                        write("<p>s.match(/\s/gi)"+s.match(/\s/gi));
+                                                    write("<p>s.match(/\bt/g)"+s.match(/\bt/g));
+                                                        write("<p>s.match(/\Bt/g)"+s.match(/\Bt/g));
+        write("<hr><b>Quantifier<b><hr>");
+                                    write("<p>s.match(/s+/g)"+s.match(/s+/g));
+                                        write("<p>s.match(/\wt/g)"+s.match(/\wt/g));
+                                            write("<p>s.match(/\Wt/g)"+s.match(/\Wt/g));
+        s1 = "Hellooo World!!! Hello World!!!";
+        write("<p>s1.match(/lo*/g):"+s1.match(/lo*/g));
+            write("<p>s1.match(/lo?/g):"+s1.match(/lo?/g));
+                s2="10,100,1000,10000,1000000";
+                write("<p>s2.match(/\d{4}/g)"+s2.match(/\d{4}/g));
+                    write("<p>s2.match(/\d{4,}/g)"+s2.match(/\d{4,}/g));
+                        write("<p>s2.match(/\W$/g)"+s2.match(/\W$/g));
+                            write("<p>s2.match(/\^t/gi)"+s2.match(/\^t/gi));
+                                write("<p>s.match(/on(?=\W/g)"+s.match(/on(?=\W)/g));
+                                    write("<p>s.match(/on(?!\W/g)"+s.match(/on(?!\W)/g));
+                                        write("<hr><b>properties</b><hr>");
+
+                                        var p = /on(?!\w)/gi;
+                                        if(p.global)
+                                        {
+                                            write("<p>g modifier is set");
+                                        }
+                                        else
+                                        {
+                                            write("<p>g modifier is not set");
+                                        }
+
+                                    if(p.ignoreCase)
+                                    
+                                
+                                        {
+                                            write("<p>g modifier is set");
+                                        }
+                                        else
+                                        {
+                                            write("<p>g modifier is not set");
+                                        }
+
+                                        if(p.multipline)
+                                    
+                                
+                                    {
+                                        write("<p>g modifier is set");
+                                    }
+                                    else
+                                    {
+                                        write("<p>g modifier is not set");
+                                    }
+                                        
+                                    write("<hr><b>method<b><hr>");
+                                        var p1 = /[0-9]/g;
+                                        var result = p1.exec(s);
+                                        write("<p>Result ="+result);
+
+                                            if(p1.test(s) == true)
+                                            write("<p>The string cointain digits");
+
+                                       
+                                        else{
+                                            write("<p>the is no contain any digits");
+                                        }
+                                        p2 = /[A-z]/g;
+                                        write("<p>Uppercase character in the string at positions");
+                                            while(p2.test(s)== true)
+                                            {
+                                                write("<br>"+p2.lastIndex);
+                                               
+                                            }
+                                               
+}
+    </script>
+    
+</body>
+</html>

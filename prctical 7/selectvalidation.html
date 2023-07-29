@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>select validtion</title>
+  </head>
+  <body>
+    <script>
+      function validateForm() {
+        if (document.f1.sem.selectedIndex == 0) {
+          alert("Please select Semester");
+          document.f1.sem.focus();
+          return false;
+        }
+
+        if (document.f1.sub.selectedIndex == -1) {
+          alert("Please select subject");
+          document.f1.sub.focus();
+          return false;
+        }
+      }
+    </script>
+    <h1>roll.no:105&121</h1>
+    <form
+      name="f1"
+      action="suc/select.html"
+      method=" post"
+      onsubmit="return validateForm()"
+    >
+      <p>
+        Semester:
+        <select size="1" name="sem" id="sem">
+          <option>Select Semester</option>
+          <option value="I">SEM I</option>
+          <option value="II">SEM II</option>
+          <option value="III">SEM III</option>
+          <option value="IV">SEM IV</option>
+          <option value="V">SEM1 V</option>
+          <option value="VI">SEM VI</option>
+          <option value="VII">SEM VII</option>
+            </select>
+
+            <p>Subjects:</p>
+            <select size="3" name="sub" multiple>
+                <option>OOPs</option>
+                <option>FMPMC</option>
+                <option>WAD</option>
+                <option>NM</option>
+                <option>GIT</option>
+                
+            
+                
+            </select>
+
+
+            <p><input type="submit" vlaue="OK"></p>
+        </select>
+      </p>
+    </form>
+  </body>
+</html>

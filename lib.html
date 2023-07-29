@@ -1,0 +1,231 @@
+<!-- <!DOCTYPE html>
+<html>
+  <head>
+    <title>Book Records</title>
+    <style>
+      table {
+        border-collapse: collapse;
+      }
+      th,
+      td {
+        border: 1px solid black;
+        padding: 8px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Book Records</h1>
+    <table id="book-table">
+      <tr>
+        <th>book_name</th>
+        <th>Author</th>
+        <th>ISBN</th>
+        <th>Genre</th>
+      </tr>
+    </table>
+    <script>
+      var books = [];
+      var table = document.getElementById("book-table");
+
+      // Read the file
+      var fileInput = document.getElementById("file_input");
+      var reader = new FileReader();
+      reader.onload = function () {
+        var fileData = reader.result;
+        var lines = fileData.split("<td>");
+        for (var i = 0; i < lines.length; i++) {
+          var data = lines[i].split(",");
+          if (data.length === 4) {
+            books.push({
+              book: data[0],
+              author: data[1],
+              isbn: data[2],
+              genre: data[3],
+            });
+          }
+        }
+        // Display the book records in the HTML table
+        for (var i = 0; i < books.length; i++) {
+          var row = table.insertRow();
+          var book = table.insertRow(0);
+          var authorCell = row.insertCell(1);
+          var isbnCell = row.insertCell(2);
+          var genreCell = row.insertCell(3);
+          bookrCell.innerHTML = books[i].book;
+          authorCell.innerHTML = books[i].author;
+          isbnCell.innerHTML = books[i].isbn;
+          genreCell.innerHTML = books[i].genre;
+        }
+      };
+      reader.readAsText(fileInput.files[0]);
+    </script>
+  </body>
+</html> -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <div>
+      <label for="search-input">Search:</label>
+      <input type="text" id="search-input" />
+      <button id="search-button">Search</button>
+    </div>
+
+    <title>Book Records</title>
+    <style>
+      table {
+        border-collapse: collapse;
+      }
+      th,
+      td {
+        border: 1px solid black;
+        padding: 8px;
+      }
+
+      #search-input {
+        padding: 0.5em;
+        margin: 0.5em;
+      }
+
+      #search-button {
+        padding: 0.5em;
+        margin: 0.5em;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>Book Records</h1>
+    <table id="book-table">
+      <tr>
+        <th>Book</th>
+        <th>Author</th>
+        <th>ISBN</th>
+        <th>Genre</th>
+      </tr>
+    </table>
+    <script>
+      var books = [];
+      var table = document.getElementById("book-table");
+      // Add 40,000 book records to the books array
+      for (var i = 0; i < 40000; i++) {
+        books.push({
+          book1: "book" + (i + 1),
+          author: "author " + (i + 1),
+          isbn: "isbn " + (i + 1),
+          genre: "genre " + (i + 1),
+        });
+      }
+      // Display the book records in the HTML table
+      for (var i = 0; i < books.length; i++) {
+        var row = table.insertRow();
+        var book1Cell = row.insertCell(0);
+        var authorCell = row.insertCell(1);
+        var isbnCell = row.insertCell(2);
+        var genreCell = row.insertCell(3);
+        book1Cell.innerHTML = books[i].book1;
+        authorCell.innerHTML = books[i].author;
+        isbnCell.innerHTML = books[i].isbn;
+        genreCell.innerHTML = books[i].genre;
+      }
+
+      // var searchButton = document.getElementById("search-button");
+      // searchButton.addEventListener("click", function () {
+      //   var searchInput = document
+      //     .getElementById("search-input")
+      //     .value.toLowerCase();
+      //   var results = books.filter(function (book) {
+      //     return (
+      //       book.author.toLowerCase().includes(searchInput) ||
+      //       book.isbn.toString().includes(searchInput) ||
+      //       book.genre.toLowerCase().includes(searchInput)
+      //     );
+      //   });
+
+      //   if (results.length > 0) {
+      //     // display the search results in a table or list
+      //     var resultsList = document.getElementById("results-list");
+      //     resultsList.innerHTML = "";
+      //     results.forEach(function (book) {
+      //       var bookItem = document.createElement("li");
+      //       bookItem.innerHTML =
+      //         "Author: " +
+      //         book.author +
+      //         " ISBN: " +
+      //         book.isbn +
+      //         " Genre: " +
+      //         book.genre;
+      //       resultsList.appendChild(bookItem);
+      //     });
+      //   } else {
+      //     alert("No books found with the search criteria: " + searchInput);
+      //   }
+      // });
+
+      // var searchButton = document.getElementById("search-button");
+      // searchButton.addEventListener("click", function () {
+      //   var searchInput = document.getElementById("search-input").value;
+      //   var results = books.filter(function (book) {
+      //     return (
+      //       book.author.toLowerCase().includes(searchInput.toLowerCase()) ||
+      //       book.isbn === searchInput ||
+      //       book.genre.toLowerCase().includes(searchInput.toLowerCase())
+      //     );
+      //   });
+
+      //   if (results.length > 0) {
+      //     // display the search results in a table or list
+      //     var resultsList = document.getElementById("results-list");
+      //     resultsList.innerHTML = "";
+      //     results.forEach(function (book) {
+      //       var bookItem = document.createElement("li");
+      //       bookItem.innerHTML =
+      //         "Author: " +
+      //         book.author +
+      //         " ISBN: " +
+      //         book.isbn +
+      //         " Genre: " +
+      //         book.genre;
+      //       resultsList.appendChild(bookItem);
+      //     });
+      //   } else {
+      //     alert("No books found with the search criteria: " + searchInput);
+      //   }
+      // });
+
+      var searchButton = document.getElementById("search-button");
+      searchButton.addEventListener("click", function () {
+        var searchInput = document.getElementById("search-input").value;
+        var result = books.find(function (book) {
+          return (
+            book.book1 || book.isbn || book.author || book.genre == searchInput
+          );
+        });
+        if (result) {
+          alert(
+            "Book: " +
+              result.book +
+              "\n Author: " +
+              result.author +
+              "\n ISBN: " +
+              result.isbn +
+              "\n Genre: " +
+              result.genre
+          );
+        } else {
+          alert("No book found with ISBN: " + searchInput);
+        }
+      });
+
+      // This will add an event listener to the search button that runs a function when the button is clicked. The function will get the value of the search input and use the find() method to search for a book in the books array that has the same ISBN as the search input. If a book is found, it will display an alert with the book's author, ISBN, and genre. If no book is found, it will display an alert saying that no book was found with the given ISBN.
+
+      // It's important to note that this code assumes that the books array has been previously populated with data, as shown in my previous examples.
+
+      // You can also add a feature to filter the data on the basis of author name or genre name.
+
+      // You can also customize the display to show the search result in tabular format or any other format.
+
+      // You can also add a feature to sort the data on the basis of author name, isbn or genre name.
+    </script>
+  </body>
+</html>

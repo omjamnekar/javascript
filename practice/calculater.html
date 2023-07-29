@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>calculater</title>
+  </head>
+  <body>
+    <script>
+      function sum() {
+        var a, b;
+        a = parseInt(document.f1.t1.value);
+        b = parseInt(document.f1.t2.value);
+        var s = 0;
+        s = a + b;
+        document.write("the sum of value is:" + s);
+      }
+
+      function sub() {
+        var a, b;
+        a = parseInt(document.f1.t1.value);
+        b = parseInt(document.f1.t2.value);
+        var s = 0;
+        s = a - b;
+        document.write("the subtraction of value is:" + s);
+      }
+
+      function div() {
+        var a, b;
+        a = parseInt(document.f1.t1.value);
+        b = parseInt(document.f1.t2.value);
+        var s = a / b;
+        document.write("the division of value is:" + s);
+      }
+
+      function mul() {
+        var a, b;
+        a = parseInt(document.f1.t1.value);
+        b = parseInt(document.f1.t2.value);
+        var s = a * b;
+        document.write("the multiply of value is:" + s);
+      }
+
+      function avg() {
+        var a, b;
+        a = parseInt(document.f1.t1.value);
+        b = parseInt(document.f1.t2.value);
+        var s = (a + b) / 2;
+        document.write("the average of value is:" + s);
+      }
+    </script>
+    <form name="f1">
+      <input type="number" name="t1" />
+      <br /><input type="number" name="t2" /> <br /><input
+        type="button"
+        onclick="sum()"
+        value="add"
+      />
+      <br /><input type="button" value="sub" onclick="sub()" />
+
+      <br /><input type="button" value="div" onclick="div()" />
+
+      <br /><input type="button" value="mul" onclick="mul()" />
+
+      <br /><input type="button" value="avg" onclick="avg()" />
+    </form>
+  </body>
+</html>

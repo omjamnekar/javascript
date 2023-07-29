@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>add and remove element</title>
+  </head>
+  <body>
+    <script>
+      var a = new Array("OOPS", "GIT", "WAD", "NM", "FMPMC");
+
+      Array.prototype.display = function () {
+        for (i = 0; i < this.length; i++) document.write("\t" + this[i]);
+      };
+
+      a.display();
+      document.write("<br>the length of array:" + a.length);
+      document.write("<p>");
+
+      document.write("<br>the pop function:" + a.pop() + "<br>");
+      a.display();
+
+      document.write("<br>the push function:" + a.push("FMPMC") + "<br>");
+
+      a.display();
+
+      var a1 = new Array("TCS", "CLDs", "C PR.", "DLA", "FDBMS");
+      document.write("<p>");
+      document.write("<br>concatination:" + a.concat(a1) + "<br>");
+
+      document.write("<p>");
+      document.write("the shift function:" + a.shift() + "<br>");
+      a.display();
+
+      document.write("<p>");
+      document.write("the shift function:" + a.unshift("OOPs") + "<br>");
+      a.display();
+
+      document.write("<p>");
+      document.write("the reverse function:" + a.reverse() + "<br>");
+      //   a.display();
+
+      document.write("<p>");
+      document.write("the sort() function:" + a.sort() + "<br>");
+      //   a.display();
+
+      document.write("<p>");
+      document.write("the slice function:" + a.slice(4) + "<br>");
+      a.display();
+
+      document.write("<p>");
+      document.write("the slice function:" + a.slice(2, 4) + "<br>");
+      a.display();
+
+      document.write("<p>");
+      document.write("the splice function:" + a.splice(2) + "<br>");
+      a.display();
+
+      document.write("<p>");
+      document.write("the splice function:" + a1.splice(2, 3) + "<br>");
+      a1.display();
+
+      document.write("<p>");
+      document.write("the splice function:" + a.splice(2) + "<br>");
+      a.display();
+    </script>
+  </body>
+</html>

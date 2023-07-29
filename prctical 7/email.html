@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>email validation</title>
+  </head>
+  <body>
+    <h1>roll.no:105&121</h1>
+    <script>
+      function validateForm() {
+        var e = document.f1.email.value;
+        var p = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+        if (p.test(e) == false) {
+          alert("invalid Eamil Address");
+          document.f1.email.focus();
+          return false;
+        }
+
+        var a = e.indexaOf("@");
+        var dm = e.substring(a + 1);
+        var d1 = dm.indexOf(".");
+        var d2 = dm.lastindexOf(".");
+
+        if (d2 != d1) {
+          if (d2 - d1 != 3 || d2 != dm.length - 3) {
+            alert("invalid Domain");
+            document.f1.email.focus();
+            return false;
+          }
+        }
+      }
+    </script>
+    <form
+      name="f1"
+      method=" post"
+      action="suc/email.html"
+      onsubmit="return validateForm()"
+    >
+      Email:<input type="text" name="email" />
+      <p><input type="submit" value="OK" /></p>
+    </form>
+  </body>
+</html>

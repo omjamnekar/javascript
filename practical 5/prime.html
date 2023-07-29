@@ -1,0 +1,39 @@
+rooocc++ <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>prime number</title>
+  </head>
+  <body>
+    <script>
+      function prime() {
+        // var a , b, i;
+        // for(a=0 ;a<= 100 ; a++ ){
+
+        //     for(i = 0 ; i/a == 0 ; i++)
+        // {
+
+        // }
+
+        // }
+
+        var n, d, p;
+
+        for (n = 2; n <= 100; n++) {
+          p = false;
+          for (d = 2; d <= n / 2; d++) {
+            if (n % d == 0) {
+              p = true;
+              break;
+            }
+            if (p == false) {
+              document.write(n + "<br>");
+            }
+          }
+        }
+      }
+    </script>
+  </body>
+</html>

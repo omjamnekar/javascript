@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>factorial</title>
+  </head>
+  <body>
+    <form name="f1">
+      enter a number:<input type="number" name="t1" /><br />
+      <input type="button" onclick="fact()" value="fact" />
+    </form>
+    <script>
+      function fact() {
+        var i,
+          f = 1;
+        var a = parseInt(document.f1.t1.value);
+
+        for (i = 1; i <= a; i++) {
+          f *= i;
+        }
+        document.write("factorial of a:" + f);
+      }
+    </script>
+  </body>
+</html>

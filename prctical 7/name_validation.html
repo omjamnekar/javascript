@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>name validation</title>
+  </head>
+  <body>
+    <h1>roll.no:105&121</h1>
+    <h2>name validation</h2>
+    <script>
+      function validateForm() {
+        var n = document.f1.uname.value;
+        var p1 = /^[A-z]+$/;
+        if (n == "") {
+          alert("please enter your name");
+          document.f1.uname.focus();
+          return false;
+        }
+        if (p1.test(n) == false) {
+          alert("invalid name");
+          document.f1.uname.focus();
+          return false;
+        }
+      }
+    </script>
+    <form
+      name="f1"
+      action="suc/name.html"
+      method=" post"
+      onsubmit="return validateForm()"
+    >
+      Uesrname:<input type="text" name="uname" />
+      <p><input type="submit" value="OK" /></p>
+    </form>
+  </body>
+</html>

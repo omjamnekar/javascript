@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cookies</title>
+</head>
+<body>
+    <script>
+        function CreateCookie()
+        {
+            var n = document.f1.uname.value;
+            if(n=="")
+            {
+                document.write("<p>Cookies has not been created");
+            }
+            else{
+                document.cookies = "username ="+n;
+                document.write("<p>Coookie created");
+                    document.write("<br>"+document.cookie);
+                    
+                
+            }
+        }
+    </script>
+
+    <p><form name="f1">
+        username :<input type="text" name="uname">
+        <p><input type="button" value="ok" onclick="CreateCookie()"></p>
+
+    </form>
+
+    </p>
+    
+</body>
+</html>

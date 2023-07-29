@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form name="f1">
+      enter a number:<input type="number" name="t1" /><br />
+      <input type="button" onclick="sod()" value="sod" />
+    </form>
+
+    <script>
+      function sod() {
+        var rem,
+          num,
+          rev = 0;
+        num = parseInt(document.f1.t1.value);
+        var v = num.toString().length;
+        for (i = 1; i <= v; i++) {
+          rem = num % 10;
+          rev = rev + rem;
+          num = Math.floor(num / 10);
+        }
+        document.write("the sum of digit is:" + rev);
+      }
+    </script>
+  </body>
+</html>

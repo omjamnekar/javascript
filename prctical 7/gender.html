@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GENDER validation</title>
+  </head>
+  <body>
+    <h1>roll.no:105&121</h1>
+    <script>
+      function validateForm() {
+        var a = document.f1.gender1.value;
+        alert("Please select the gender");
+        if (
+          document.getElementsById("genderM").checked == false &&
+          document.getElementsById("genderF").checked == false
+        ) {
+          return false;
+        }
+      }
+    </script>
+    <form
+      name="f1"
+      action="suc/gender.html"
+      method=" post"
+      onsubmit="return validateForm()"
+    >
+      <input type="radio" name="gender1" id="genderM" value="m" /> male &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp;
+      <input type="radio" name="gender2" id="genderF" value="f" /> female &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp;
+      <p><input type="submit" value="OK" /></p>
+    </form>
+  </body>
+</html>

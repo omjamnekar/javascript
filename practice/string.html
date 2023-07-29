@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>String</title>
+  </head>
+  <body>
+    <script>
+      var a = new String(
+        'This is a demonstration of the "JavaScript" the string Object'
+      );
+      with (document) {
+        write("<br>the charAt(2):" + a.charAt(2));
+        write("<br>the codeCharAt(2):" + a.charCodeAt(2));
+        write("<br>the FromcodeChar(2):<br>" + String.fromCharCode(34));
+        var s = new String(" with programming");
+        write(a.concat(s));
+
+        write("<br>the indexOf():" + a.indexOf("is"));
+        write("<br>the lastIndexOf('is'):" + a.lastIndexOf("is"));
+
+        write("<br>the match(/of/):" + a.match(/of/));
+        write("<br>the match(/is/g):" + a.match(/is/g));
+        write("<br>the match(/the/gi):" + a.match(/the/gi));
+        write("<br>the match(/of/):" + a.match(/of/));
+
+        s1 = new String(
+          "Mr Bean has A blue car in the Blue house in the time of old days"
+        );
+
+        write("<br>the replace(/of/):" + s1.replace(/A/, "big"));
+        write("<br>the replace(/of/):" + s1.replace(/the/gi, "THE"));
+        write("<br>the search(/has/):" + s1.search(/B/));
+        write("<br>the search(/has/):" + s1.search(/B/g));
+        write("<br>the search(/has/):" + s1.search(/B/gi));
+
+        write("<br>the slice(44,6)" + s1.slice(4, 6));
+        write("<br>the slice(44,6)" + s1.slice(4));
+        write("<br>the slice(44,6)" + s1.slice(-34, -22));
+
+        write("<br>the sustr(4,9):" + s1.substr(10, 9));
+        write("<br>the sustring(4,9):" + s1.substring(10, 9));
+        write("<br>toLowercase()" + s1.toLowerCase());
+        write("<br>toUpperCase()" + s1.toUpperCase());
+        write("<br>split('')" + s1.split(""));
+        //cahrAt()
+        //CodeCharsAt()
+        //match(/is/)gi
+        //concat()
+        //indexOf()
+        //replace(/is/,"has")
+        //search()
+        //substr()
+        //substring()
+        //toLowercase()
+        //toUppercase()
+        //split()
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>math object</title>
+</head>
+
+<body>
+
+    <script>
+        with(Math)
+        {
+            with(document)
+            {
+
+                write("<p> Eular's number"+E);
+                    write("<p> Eular's Logarithm of 2"+LN2);
+                        write("<p> Narutal Loagarithm0 0f 10"+LN10);
+                            write("<p> logarithm of E to Base 2= "+LOG2E);
+                            write("<p> logarithm of E to Base 10= "+LOG10E);
+                                
+                            write("<p> PI"+PI);
+                                
+                            write("<p>square root of 1/2=  "+SQRT1_2);
+                                write("<p>square root of 2=  "+SQRT2);
+                                
+            }
+       
+        function CalcAds()
+        {
+            var n = Number(prompt("enter a number:"));
+            alert("absolute value of "+n+"="+Math.abs(n));
+        }
+
+        function CalcCST()
+        {
+            var n = Number(prompt("Enter a Nunmber"));
+            alert("cossine of"+n+"="+Math.sin(n)+"\n"+Math.tan(n));
+
+        }
+
+        function Calclog()
+        {
+            var n = Number(prompt("ENTER a number"));
+            alert("logarithm of "+n+"="+Math.log(n));
+
+        }
+        function Exp()
+        {
+            var n = Number(prompt("ENTER a number"));
+            alert("Exponentiation of "+n+"="+Math.exp(n));
+
+        }
+
+
+        function CalcCF()
+        {
+            var n = Number(prompt("ENTER a number"));
+            alert("ceiling value  of "+n+"="+Math.ceil(n)+"\n"+"floor VALue of "+n+"="+Math.floor(n));
+
+        }
+
+        function CalcRnd()
+        {
+            var n = Number(prompt("Enter a number:"));
+            alert(Math.round(n));
+
+        }
+
+        
+        function CalcPower()
+        {
+           var x =parseInt(document.f1.n1.value);
+           var y =parseInt(document.f1.n2.value);
+
+           alert(x+"to the power"+y+"="+Math.pow(x,y))
+
+        }
+    }
+
+
+    </script>
+    
+    <p> <input type="button" value="absolute value" onclick="CalcAds()"> 
+    <p> <input type="button" value="COS_SIN_TAN" onclick="CalcCST()"> 
+    <p> <input type="button" value="ceillogarithm" onclick="Calclog()"> 
+    <p> <input type="button" value="Exponentiation" onclick="Exp()"> 
+    <p> <input type="button" value="ceillogarithm" onclick="CalcCF()"> 
+    <p> <input type="button" value="ROund" onclick="CalcRnd()"> 
+    <p> <input type="button" value="squareROOT" onclick="Calc.sqrt()"> 
+    <p> <input type="button" value="random value" onclick="alert(Math.random())"> 
+
+    <p>
+        <form name = "f1">
+            value 1: <input type="text" name="n1">
+            <br> value2: <input type="text" name="n2">
+
+        </form>
+
+        <p><input type="button" value="power" onclick="CalcPower()">
+    </p>
+    
+    
+
+
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>drop down list</title>
+  </head>
+  <body>
+    <script>
+      function sel() {
+        if (document.f1.sem.selectedIndex == 0) {
+          alert("Please select semeter");
+
+          return false;
+        }
+        if (document.f1.sub.selectedIndex == -1) {
+          alert("Please select subject");
+
+          return false;
+        }
+        document.write("semster and subject is selected");
+      }
+    </script>
+
+    <form name="f1" method="post" action="#" onsubmit="return sel()">
+      <select name="sem" size="1">
+        <option>semI</option>
+
+        <option>semII</option>
+
+        <option>semIII</option>
+        <option>semIV</option>
+        <option>semV</option>
+        <option>semVI</option>
+      </select>
+
+      <div>subject</div>
+      <select name="sub" size="3" multiple>
+        <option>GIT</option>
+        <option>FMPMC</option>
+        <option>NM</option>
+        <option>WAD</option>
+        <option>OOPS</option>
+      </select>
+
+      <input type="submit" value="ok" />
+    </form>
+  </body>
+</html>

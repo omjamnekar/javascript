@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>date object</title>
+</head>
+<body>
+
+    <script>
+        var d1 = new Date();
+        
+        var d2 = new  Date("october,08,2002,08:46:00");
+        
+        var d3 = new  Date(2002,9,8,8,46,0);
+        
+        var d4 = new  Date(7,2002,8);
+        
+
+        with(document){
+            write("<br>"+d1);
+            
+            write("<br>"+d2);
+           
+            write("<br>"+d3);
+           
+            write("<br>"+d4);;
+            write("<p> day of the month="+d1.getDate());
+                write("<p>month="+d1.getMonth());
+                    write("<p>day of the wweek =" +d1.getDay());
+                        write("<p> year=",+d1.getFullYear());
+                            write("<p>minutes="+d1.getSeconds());
+                                write("<p>milisecond="+d1.getMilliseconds());
+
+            write("<p> day of thre month(utc)="+d1.getUTCDate());
+                write("<p> month CTC=", +d1.getUTCMonth());
+                    write("<p> day of the week (UTC)="+d1.getUTCDay());
+                        write("<p> year=",+d1.getUTCFullYear());
+                            write("<p>minutes="+d1.getUTCSeconds());
+                                write("<p>milisecond="+d1.getUTCMilliseconds());
+
+            write("<p>midnight jan 01, 1970"+d1.getTime());
+                write("<p>Time tone offset"+d1.getTimezoneOffset());
+                    write("<p>parge value"+Date.parse("january,o1,2024"));
+                        write("<hr>");
+
+
+                        write("<hr>");
+                        write("<p>"+d1.toString());
+                            write("<P>"+d1.valueOf());
+                                write("<hr>");
+                                write("<p>"+d1);
+                                d1.setDate(22);
+                                d1.setMonth(1);
+                                d1.setYear(2023);
+                                d1.setHours(9);
+                                d1.setMinutes(45);
+                                d1.setSeconds(0);
+                                d1.setMilliseconds(100);
+
+        }
+       
+
+
+        
+    </script>
+    
+</body>
+</html>

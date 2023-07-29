@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>date validation</title>
+  </head>
+  <body>
+    <h1>roll.no:105&121</h1>
+    <script>
+      function validateForm() {
+        var dob = document.f1.dob.value;
+        var day = parseInt(dob.substring(0, 2));
+        var month = parseInt(dob.substring(3, 5));
+        var year = parseInt(dob.substring(6));
+
+        var p = /^\d{2}\-\d{2}\-\d{4}$/;
+
+        if (p.test(dob) == false) {
+          alert("invalid date format");
+          document.f1.dob.focus();
+          return false;
+        }
+        if (month == 0 || month > 12) {
+          alert("invalid month");
+          document.f1.dob.focus();
+          return false;
+        }
+        if (
+          month == 0 ||
+          month == 3 ||
+          month == 5 ||
+          month == 7 ||
+          month == 8 ||
+          month == 10 ||
+          month == 12
+        ) {
+          if (day == 0 || day > 31) {
+            alert("invalid day of the month");
+            document.f1.dob.focus();
+            return false;
+          }
+        }
+
+        if (month == 4 || month == 6 || month == 9 || month == 11) {
+          if (day == 0 || day > 30) {
+            alert("invalid day of the month2");
+            document.f1.dob.focus();
+            return false;
+          }
+        }
+
+        if (month == 2) {
+          if (year % 4 == 0) {
+            if (day == 0 || day > 29) {
+              alert("invalid day of the month");
+              document.f1.dob.focus();
+              return false;
+            }
+          } else {
+            if (month == 0 || day > 28) {
+              alert("invalid day of the month");
+              document.f1.dob.focus();
+              return false;
+            }
+          }
+        }
+
+        var dt = new Date();
+        var curr_yr = parseInt(dt.getFullYear());
+
+        if (curr_yr < year || curr_yr - year < 18) {
+          alert("invalid date");
+          document.f1.dob.focus();
+          return false;
+        }
+      }
+    </script>
+
+    <form
+      name="f1"
+      action="suc/date.html"
+      method=" post"
+      onsubmit="return validateForm()"
+    >
+      DOB:<input type="text" name="dob" />
+      <p><input type="submit" value="OK" /></p>
+    </form>
+  </body>
+</html>

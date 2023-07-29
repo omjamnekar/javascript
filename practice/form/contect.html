@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>contect</title>
+  </head>
+  <body>
+    <script>
+      function val() {
+        var a = document.f1.t1.value;
+        var g = document.f1.t2.value;
+        p1 = /\d{10}/;
+
+        if (p1.test(a) == false) {
+          alert("the should be 10 digits in number1");
+          document.f1.t1.focus();
+          return false;
+        }
+
+        if (p1.test(g) == false) {
+          alert("the should be 10 digits in number2");
+          document.f1.t1.focus();
+          return false;
+        }
+
+        document.write("the contect validaiton is successfull");
+      }
+    </script>
+
+    <form name="f1" method="post" action="fod.html" onsubmit="return val()">
+      <input type="number" name="t1" /><br />
+
+      <input type="number" name="t2" />
+      <br /><input type="submit" value="ok" />
+    </form>
+  </body>
+</html>

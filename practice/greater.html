@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>greater number</title>
+  </head>
+  <body>
+    <form name="f1">
+      <input type="text" name="t1" /> <br />
+      <input type="text" name="t2" /><br />
+      <input type="text" name="t3" />
+      <br /><input type="button" value="greater" onclick="great()" />
+    </form>
+
+    <script>
+      function great() {
+        var a, b, c;
+        a = parseInt(document.f1.t1.value);
+        b = parseInt(document.f1.t2.value);
+        c = parseInt(document.f1.t3.value);
+
+        if (a > b && a > c) document.write("the greater number is:" + a);
+        else if (b > c) document.write("the greater number is:" + b);
+        else document.write("the greater number is:" + c);
+      }
+    </script>
+  </body>
+</html>

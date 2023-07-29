@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>string object</title>
+</head>
+<body>
+    
+    <script>
+        s = new Sting ("This is a demonstration of the \"Javascript\" string object");
+        with(document)
+        {
+            write("s=",+s);
+            write("<p>length of s="+s.length);
+            write("<p>s.charcodeat()"+s.charAt());
+            write("<p>s.StringFromCharcode()"+s.StringFromCharcode());
+            write("<p>s.cocat(properties and method):"+s.cocat("properties and method"));
+            write("<p>s.Indexof(is)"+s.Indexof("is"));
+            write("<p>s.lasrIndex(is)"+s.lastIndex("is"));
+            write("<p>s.match(/is/)"+s.match(/is/));
+            write("<p>s.match(/is/g)"+s.match(/is/g));
+            s1 = new String("Mr. Blue has a blue house and a blue car");
+            
+            write("<p>s1.replace(/blue/'red')"+s1.replace(/blue/,'red'));
+            write("<p>s1.replace(/blue/g'red')"+s1.replace(/blue/g,'red'));
+            write("<p>s1.replace(/bluei/'red')"+s1.replace(/blue/gi,'red'));
+                
+            write("<p>s.slice(0)",s.slice(0));
+            write("<p>s.slice(8)",s.slice(8));
+            
+            write("<p>s.search(/Javascript/i):"+s.search(/Javascript/i));
+            write("<p>s.search(/Javascripr/)="+s.search(/Javascripr/));
+            write("<p>s.slice(31,45)="+s.slice(31,45));
+            write("<p>s.slice(-22)="+s.slice(-22));
+                write("<p>s.slice(-22,-12)="+s.slice(-22,-12));
+                    write("<p>s.substr(44,6)="+s.substr(44,6));
+                        write("<p>s.substring(44,50)="+s.substring(44,50));
+                            write("<p>s.substing(44)="+s.substring(44));
+                                write("<p>s..toLowercase()="+s.toLowercase());
+                                    write("<p>s.Uppercase()="+s.toUppercase());
+                                    
+        
+            }
+    </script>
+</body>
+</html>
